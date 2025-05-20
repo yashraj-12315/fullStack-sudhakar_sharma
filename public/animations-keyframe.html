@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes Rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .parent {
+        height: 200px;
+        width: 200px;
+        border-radius: 200px;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-bottom: 4px dotted red;
+        border-left: 4px solid black;
+        animation-name: Rotate;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .child {
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        border-top: 4px solid black;
+        border-right: 4px solid black;
+        border-bottom: 4px solid black;
+        border-left: 4px dotted red;
+        transform: translateX(-200px);
+        position: absolute;
+        animation-name: Rotate;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent"></div>
+    <div class="child"></div>
+  </body>
+</html>

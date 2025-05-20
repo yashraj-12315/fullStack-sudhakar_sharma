@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        dialog{
+            height: 300px;
+            width: 300px;
+            box-shadow: 2px 2px 2px gray;
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .dialog-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            margin-bottom: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .dialog-body{
+            height:200px;
+            
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+
+        .row div{
+            margin-top: 20px;
+        }
+
+        .btn-login{
+            background-color: #007bff;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .form-control{
+            width: 150px;
+            height:20px ;
+            border: 1px solid black;
+        }
+        body{
+            background-size: cover;
+        }
+    </style>
+</head>
+<body background="./images/women-fashion.jpg">
+    <dialog open>
+        <div class="dialog-header">
+            <span class="bi bi-person-fill">User Login</span>
+            <span class="bi bi-x-circle-fill"></span>
+        </div>
+        <div class="dialog-body">
+            <div class="row">
+                <div>
+                    <div>User Name</div>
+                    <div>Password</div>
+                </div>
+                <div>
+                    <div class="form-control"></div>
+                    <div class="form-control"></div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-footer">
+            <div class="btn-login">Login</div>
+        </div>
+    </dialog>
+</body>
+</html>

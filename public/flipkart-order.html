@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 5fr 5fr;
+      }
+      .container div {
+        border: 2px solid black;
+      }
+      ul {
+        list-style: none;
+      }
+      .bread-crumb li {
+        display: inline;
+      }
+      .bread-crumb li::after {
+        content: ">";
+        color: gray;
+        padding: 2px;
+      }
+
+      .bread-crumb li:last-child::after {
+        content: "";
+      }
+      .star {
+        background-color: green;
+        color: white;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      .offers {
+        margin-left: -40px;
+      }
+      .offers li {
+        line-height: 35px;
+      }
+      .bank-heading {
+        font-weight: bold;
+      }
+
+      .elipsis {
+        width: 10%;
+        border: 2px solid black;
+        color: blueviolet;
+        white-space: "nowrap";
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-sect">
+        <img src="/public/images/iphone.jpg" alt="" height="540" >
+      </div>
+
+      <div class="middle-sect">
+        <div>
+          <ul class="bread-crumb">
+            <li>Home &nbsp;</li>
+            <li>Mobiles and Accessories &nbsp;</li>
+            <li>Apple Mobiles</li>
+            <li>Apple Iphone 16 Pro</li>
+          </ul>
+          <div>Apple iphone 16 (White, 128GB)</div>
+          <div>
+            <span class="star">4.6 <span class="bi bi-star-fill"></span></span>
+            <span class="ratings-content">6,186 Ratings & 319 Reviews</span>
+          </div>
+
+          <div>
+            <font face="Algerian" size="5" color="gray">&#8377;6242/month</font>
+            <font>12 months NO Cost EMI with Bajaj Finserv</font>
+          </div>
+
+          <div>Extra 5000 off</div>
+          <div>
+            &#8377;74900 <span>&#8377; <strike>79,990</strike></span>
+            <span>6% off</span>
+          </div>
+
+          <div>
+            <h4>Available offers</h4>
+            <ul class="offers">
+              <li class="bi bi-tag-fill">
+                <span>Bank Offer 1% Upto 2000 Phone UPI Transaction</span>
+              </li>
+              <li class="bi bi-tag-fill">
+                <span
+                  >Bank Offer 5% Unlimited Cashback on Flipkart Axis Bank Credit
+                  Card</span
+                >
+              </li>
+              <li class="bi bi-tag-fill">
+                <span
+                  ><span class="bank-heading">Bank Offer</span>₹4000 Off On
+                  ICICI Bank Credit Non EMI, Credit and Debit Card EMI
+                  Transactions</span
+                >
+              </li>
+              <li class="bi bi-tag-fill">
+                <span
+                  >Special PriceGet extra ₹5000 off (price inclusive of
+                  cashback/coupon)</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-sec">Right</div>
+    </div>
+  </body>
+</html>

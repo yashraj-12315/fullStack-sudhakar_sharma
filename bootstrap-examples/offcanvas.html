@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body class="container-fluid">
+    <div class="btn-toolbar p-2 bg-dark d-flex justify-content-between">
+      <button
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menu"
+        class="btn btn-dark bi bi-justify fs-4"
+      >
+        Amazon
+      </button>
+      <button
+        data-bs-toggle="offcanvas"
+        data-bs-target="#cart"
+        class="btn btn-warning bi bi-cart4"
+      ></button>
+    </div>
+    <div class="offcanvas offcanvas-start" id="menu">
+      <div class="offcanvas-header bg-dark">
+        <h3 class="offcanvas-title text-white">Browse Amazon</h3>
+        <button
+          class="btn btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="list-group mt-4">
+          <div class="list-group-item">Electronics</div>
+          <div class="list-group-item my-2">Footwear</div>
+          <div class="list-group-item">Fashion</div>
+          <div class="list-group-item my-2">Contact</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" id="cart">
+      <div class="offcanvas-header bg-warning">
+        <h3 class="offcanvas-title text-white">Your Cart Items</h3>
+        <button
+          class="btn btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="list-group mt-4">
+          <div class="list-group-item">Mobile - 2</div>
+          <div class="list-group-item my-2">Footwear</div>
+          <div class="list-group-item">Fashion</div>
+          <div class="list-group-item my-2">Contact</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

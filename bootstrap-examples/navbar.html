@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          data-bs-target="#menu"
+          data-bs-toggle="collapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="navbar-brand">Shopper.</span>
+        <div class="navbar-collapse collapse" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link"> Home </a></li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="frameBody"
+                href="../public/shopper-template.html"
+              >
+                Shop
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="frameBody"
+                href="../public/amazon-cards.html"
+              >
+                Blog
+              </a>
+            </li>
+            <li class="nav-item"><a class="nav-link"> Pages </a></li>
+            <li class="nav-item"><a class="nav-link"> Docs </a></li>
+            <li class="nav-item">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search Shopper.in"
+                />
+                <button class="bi bi-search btn btn-warning"></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <iframe width="100%" height="500" name="frameBody"> </iframe>
+    </section>
+  </body>
+</html>

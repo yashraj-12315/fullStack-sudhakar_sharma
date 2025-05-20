@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="container-fluid">
+    <div class="carousel carousel-fade" data-bs-ride="carousel" id="banner">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="../public/images/slide-1.png" alt="" height="300" />
+        </div>
+        <div class="carousel-item" data-bs-interval="1000">
+          <img src="../public/images/slide-2.png" alt="" height="300" />
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="../public/images/slide-3.png" alt="" height="300" />
+        </div>
+      </div>
+      <button
+        data-bs-slide="prev"
+        data-bs-target="#banner"
+        class="carousel-control-prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        data-bs-slide="next"
+        data-bs-target="#banner"
+        class="carousel-control-next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <div class="carousel-indicators">
+        <button
+          class="active"
+          data-bs-slide-to="0"
+          data-bs-target="#banner"
+        ></button>
+        <button data-bs-slide-to="1" data-bs-target="#banner"></button>
+        <button data-bs-slide-to="2" data-bs-target="#banner"></button>
+        
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><meter value="60" min="0" max="100"></meter></li>
+        <li><meter value="30" min="0" max="100"></meter></li>
+        <li><meter value="90" min="0" max="100"></meter></li>
+    </ul>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       input:optional+span{
+          display: none;
+       }
+       input:required+span {
+          display: inline;
+          color:red;
+       }
+       input:invalid+span {
+          display: inline;
+          color:red;
+       }
+       input:valid+span {
+          display: none;
+       }
+       input:invalid~div {
+         display: block;
+         color:red;
+         font-size: 12px;
+       }
+       input:valid~div {
+        display: none;
+       }
+       input:invalid {
+          outline: none;
+          border:1px solid red;
+       }
+    </style>
+</head>
+<body>
+    <!-- <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" class="UserName" required> <span>*</span>
+                <div>Name Required</div>
+            </dd>
+            <dt>Mobile</dt>
+            <dd><input type="text" class="Mobile" pattern="\+91\d{10}" > <span>*</span>
+                <div>Invalid Mobile</div>
+            </dd>
+            <dt>Password</dt>
+            <dd><input type="password" required class="Pwd"> <span>*</span>
+                <div>Password Required</div>
+            </dd>
+        </dl>
+        <button>Register</button>
+    </form> -->
+    <marquee behavior="alternate" loop="3" direction="">Yash Raj</marquee>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart Footer</title>
+    <style>
+      .footer {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        background-color: black;
+        height: 400px;
+        color: white;
+        padding: 20px;        
+      }
+      .panel-left {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        text-align: center;
+      }
+
+      .panel-right {
+        display: grid;
+        grid-template-columns: repeat(2, 6fr);
+        border-left: 1px solid white;
+        padding-left: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer">
+      <div class="panel-left">
+        <div>col1</div>
+        <div>col2</div>
+        <div>col3</div>
+        <div>col4</div>
+      </div>
+      <div class="panel-right">
+        <div>col1</div>
+        <div>col2</div>
+      </div>
+    </div>
+  </body>
+</html>

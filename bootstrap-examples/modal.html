@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body class="container-fluid">
+    <button
+      data-bs-toggle="modal"
+      data-bs-target="#login"
+      class="btn btn-primary mt-3"
+    >
+      Login
+    </button>
+    <button
+      data-bs-toggle="modal"
+      data-bs-target="#fashion"
+      class="btn btn-warning mt-3"
+    >
+      Fashion
+    </button>
+    <div class="modal " id="login">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="bi bi-person-circle">User Login</h3>
+            <button data-bs-dismiss="modal" class="btn btn-close"></button>
+            <button
+              data-bs-target="#help"
+              data-bs-toggle="modal"
+              class="btn mx-3 btn-info bi bi-question-circle"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <dl>
+              <dt>User Name</dt>
+              <dd><input type="text" class="form-control" /></dd>
+              <dt>Password</dt>
+              <dd><input type="password" class="form-control" /></dd>
+              <dt>User Name</dt>
+              <dd><input type="text" class="form-control" /></dd>
+              <dt>Password</dt>
+              <dd><input type="password" class="form-control" /></dd>
+              <dt>User Name</dt>
+              <dd><input type="text" class="form-control" /></dd>
+              <dt>Password</dt>
+              <dd><input type="password" class="form-control" /></dd>
+              <dt>User Name</dt>
+              <dd><input type="text" class="form-control" /></dd>
+              <dt>Password</dt>
+              <dd><input type="password" class="form-control" /></dd>
+              <dt>User Name</dt>
+              <dd><input type="text" class="form-control" /></dd>
+              <dt>Password</dt>
+              <dd><input type="password" class="form-control" /></dd>
+              <dt>User Name</dt>
+              <dd><input type="text" class="form-control" /></dd>
+              <dt>Password</dt>
+              <dd><input type="password" class="form-control" /></dd>
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning">Login</button>
+            <button data-bs-dismiss="modal" class="btn btn-danger">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="fashion">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1>Women Fashion</h1>
+
+            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>70% OFF - Summer Sale Starts 05-Apr-2025</p>
+            <img
+              src="../public/images/women-fashion-1.jpg"
+              width="100%"
+              height="300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="help">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Help</h3>
+            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              consequatur, consequuntur architecto itaque atque dolorum iure
+              doloribus aut quos adipisci magni quaerat odit quae cumque
+              voluptatum at veniam sequi officia. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Similique adipisci neque blanditiis,
+              vel ex facere pariatur molestiae illo qui necessitatibus odit
+              vitae quisquam expedita iusto eos nesciunt quis quo placeat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

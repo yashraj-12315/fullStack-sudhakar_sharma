@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      function ApplyClick() {
+        document.getElementById("detailsContainer").style.display = "block";
+        document.getElementById("lblName").textContent =
+          document.getElementById("txtName").value;
+        document.getElementById("lblBrand").textContent =
+          document.getElementById("lstBrands").value;
+        document.getElementById("lblMfd").textContent =
+          document.getElementById("txtMfd").value;
+        document.getElementById("lblRating").textContent =
+          document.getElementById("rangeRating").value;
+      }
+
+      function ChangeTitle(){
+        document.getElementById("title").textContent="Modify Product";
+      }
+    </script>
+  </head>
+  <body class="container-fluid">
+    <nav>
+      <button
+        class="bi bi-justify btn"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#filter"
+      >
+        Amazon
+      </button>
+      <div class="offcanvas offcanvas-start" id="filter">
+        <div class="offcanvas-header">
+          <h3 id="title">Search Product</h3>
+          <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <dl>
+            <dt>Name</dt>
+            <dd><input type="text" id="txtName" class="form-control" /></dd>
+            <dt>Brand</dt>
+            <dd>
+              <select name="" id="lstBrands" class="form-select">
+                <option>Select Brand</option>
+                <option>Apple</option>
+                <option>Samsung</option>
+                <option>Redmi</option>
+              </select>
+            </dd>
+            <dt>Manufactured</dt>
+            <dd>
+              <input type="month" id="txtMfd" class="form-control" />
+            </dd>
+            <dt>Rating</dt>
+            <dd class="input-group">
+              <span class="input-group-text">1</span>
+              <input
+                id="rangeRating"
+                type="range"
+                min="1"
+                max="5"
+                value="1"
+                class="form-range w-75"
+              /><span class="input-group-text">5</span>
+            </dd>
+          </dl>
+          <button
+            onclick="ApplyClick()"
+            data-bs-dismiss="offcanvas"
+            class="btn btn-primary w-100"
+          >
+            Apply Filter
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section class="mt-4" style="display: none" id="detailsContainer">
+      <div>
+        <h3 >Filter Details</h3>
+        <dl class="row">
+          <dt class="col-4">Product Name</dt>
+          <dd class="col-8" id="lblName"></dd>
+          <dt class="col-4">Brand Name</dt>
+          <dd class="col-8" id="lblBrand"></dd>
+          <dt class="col-4">Manufactured</dt>
+          <dd class="col-8" id="lblMfd"></dd>
+          <dt class="col-4">Rating</dt>
+          <dd id="" class="col-8">
+            <span
+              id="lblRating"
+              class="badge bg-success rounded bi bi-star-fill"
+            ></span>
+          </dd>
+        </dl>
+        <button
+          class="btn btn-warning"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#filter"
+          onclick="ChangeTitle()"
+        >
+          Modify Filter
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

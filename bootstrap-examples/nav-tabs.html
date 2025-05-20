@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="container-fluid">
+    <h2>Product Details</h2>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="#basic" data-bs-toggle="tab" class="nav-link active">
+          Basic Details</a
+        >
+      </li>
+      <li class="nav-item">
+        <a href="#preview" data-bs-toggle="tab" class="nav-link"> Preview</a>
+      </li>
+      <li class="nav-item">
+        <a href="#offers" data-bs-toggle="tab" class="nav-link"> Offers</a>
+      </li>
+      <li class="nav-item">
+        <a href="#reviews" data-bs-toggle="tab" class="nav-link"> Reviews</a>
+      </li>
+    </ul>
+    <div class="tab-content mt-4">
+      <div class="tab-pane active" id="basic">
+        <h5>iPhone 16 (128 GB) Purple</h5>
+        <p class="fs-4">&#8377; 76,999/-</p>
+      </div>
+      <div class="tab-pane" id="preview">
+        <img src="../public/images/a4.jpg" alt="" width="200" height="200" />
+      </div>
+      <div class="tab-pane" id="offers">
+        <ul class="list-unstyled">
+          <li class="bi bi-tag-fill text-success">
+            <span class="text-secondary">HDFC Bank 20% OFF</span>
+          </li>
+          <li class="bi bi-tag-fill text-success">
+            <span class="text-secondary">HDFC Bank 20% OFF</span>
+          </li>
+          <li class="bi bi-tag-fill text-success">
+            <span class="text-secondary">HDFC Bank 20% OFF</span>
+          </li>
+          <li class="bi bi-tag-fill text-success">
+            <span class="text-secondary">HDFC Bank 20% OFF</span>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-pane" id="reviews">
+        <span class="badge bg-success p-2 rounded text-white"
+          >4.5 <span class="bi bi-star-fill"></span
+        ></span>
+        <span class="mx-2 text-secondary fw-bold">
+          500 Ratins & 300 reviews</span
+        >
+      </div>
+    </div>
+  </body>
+</html>

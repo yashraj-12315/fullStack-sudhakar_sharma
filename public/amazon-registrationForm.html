@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      form {
+        font-family: Arial;
+        border: 1px solid gray;
+        padding: 30px;
+        border-radius: 10px;
+      }
+      .form-title {
+        font-size: 30px;
+        padding-bottom: 10px;
+      }
+      .form-warning {
+        color: gray;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-control {
+        width: 100%;
+        font-size: 15px;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      label {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .form-info {
+        margin-top: 10px;
+      }
+
+      .bi-info-circle-fill {
+        color: darkcyan;
+      }
+
+      .btn-continue {
+        background-color: yellow;
+        width: 100%;
+        border-radius: 20px;
+        padding: 10px;
+        border: none;
+      }
+      .terms {
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .buying {
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid rgb(205, 204, 204);
+        border-bottom: 2px solid gray;
+      }
+
+      .buying a {
+        text-decoration: none;
+      }
+      div a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="form-title">Create Account</div>
+      <div class="form-warning">All fields are required</div>
+      <div class="form-group">
+        <label for="username">Your Name</label>
+        <div>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="form-control"
+            placeholder="First and last name"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Mobile number or email</label>
+        <div>
+          <input type="text" name="email" id="email" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+            placeholder="At least 6 characters"
+          />
+          <div class="form-info">
+            <span class="bi bi-info-circle-fill"></span> passwords must be
+            atleast 6 characters
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmpwd">Re-enter password</label>
+        <div>
+          <input
+            type="password"
+            name="confirmpwd"
+            id="confirmpwd"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn-continue">Continue</button>
+      </div>
+
+      <div class="terms">
+        By creating an account, you agree to Amazon's <br />
+        Conditions of Use and Privacy Notice
+      </div>
+
+      <div class="buying">
+        <b>Buying for work? </b> <br />
+        <a href="#"> Create a free business account</a>
+      </div>
+
+      <div>
+        Already have an account?
+        <a href="#">Sign in<span class="bi bi-chevron-right"></span></a>
+      </div>
+    </form>
+  </body>
+</html>
