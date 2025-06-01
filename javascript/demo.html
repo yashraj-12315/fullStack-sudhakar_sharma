@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var username = "john_nit";
+      function verifyName() {
+        var uname = document.getElementById("txtName").value;
+        var lblName = document.getElementById("lblName");
+
+        if (uname == username) {
+          lblName.innerHTML = "User Name already taken - Try Another"
+            .fontcolor("red")
+            .fontsize(2)
+            .italics();
+        } else {
+          lblName.innerHTML = "User Name Available".fontcolor("green");
+        }
+      }
+
+      function changeCase() {
+        var code = document.getElementById("txtCode").value;
+        document.getElementById("txtCode").value = code.toUpperCase();
+      }
+    </script>
+  </head>
+  <body>
+    <dl>
+      <dt>User Name</dt>
+      <dd>
+        <input type="text" id="txtName" onkeyup="verifyName()" />
+      </dd>
+      <dd id="lblName"></dd>
+      <dt>IFSC Code</dt>
+      <dd><input type="text" id="txtCode" onblur="changeCase()" /></dd>
+    </dl>
+  </body>
+</html>
