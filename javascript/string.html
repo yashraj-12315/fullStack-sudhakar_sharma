@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function verifyName() {
+        var username = document.getElementById("txtName").value;
+        var lblName = document.getElementById("lblName");
+
+        if (username.length == 0) {
+          lblName.innerHTML = "Name is required".fontcolor("red");
+        } else {
+          if (username.length < 4) {
+            lblName.innerHTML = "Name too short".fontcolor("red");
+          } else {
+            lblName.innerHTML = "";
+          }
+        }
+      }
+
+      function verifyComments() {
+        var comments = document.getElementById("txtComments").value;
+        document.getElementById("lblComments").innerHTML = `${
+          100 - comments.length
+        } chars left`.fontcolor("gold");
+      }
+
+      function verifyCaps() {
+        var username = document.getElementById("txtName").value;
+        var firstCharCode = username.charCodeAt(0);
+        var lblName = document.getElementById("lblName");
+
+        if (username.charAt(0) == "d" || username.charAt(0) == "D") {
+          if (firstCharCode >= 65 && firstCharCode <= 90) {
+            lblName.innerHTML = "";
+          } else {
+            lblName.innerHTML = "Name must start with uppercase letter"
+              .fontcolor("red")
+              .fontsize(3);
+          }
+        } else {
+          lblName.innerHTML = "Name must starts with D char"
+            .fontcolor("red")
+            .fontsize(2);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <dl>
+      <dt>User Name</dt>
+      <dd>
+        <input
+          type="text"
+          id="txtName"
+          onkeyup="verifyName()"
+          onblur="verifyCaps()"
+        />
+      </dd>
+      <dd id="lblName"></dd>
+      <dt>Your comments</dt>
+      <dd>
+        <textarea
+          id="txtComments"
+          rows="4"
+          cols="40"
+          maxlength="100"
+          onkeyup="verifyComments()"
+        ></textarea>
+      </dd>
+      <dd id="lblComments"></dd>
+    </dl>
+  </body>
+</html>
