@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // var contacts = "Ajay-9142046589,Yash-9680644986";
+      // var [Ajay,Yash] = contacts.split(',')
+      // document.write(`Ajay mobile number: ${Ajay.split('-')[1]}`)
+
+      // Write a function to print string in sentence case (the first letter uppercase and all other letters should be in lowerCase) o/p: Welcome
+
+      function changeCase(str) {
+        var firstChar = str.charAt(0);
+        var restChars = str.slice(1);
+        var sentence = firstChar.toUpperCase() + restChars.toLowerCase();
+        document.write(sentence);
+      }
+      changeCase(prompt("Enter Sentence"));
+    </script>
+  </head>
+  <body></body>
+</html>

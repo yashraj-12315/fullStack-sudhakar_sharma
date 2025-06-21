@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function verifyPassword() {
+        var password = document.getElementById("txtPwd").value;
+        var lblPassword = document.getElementById("lblPwd");
+        var regExp = /(?=.*[A-Z])\w{4,15}/;
+        var meter = document.querySelector("meter");
+        if (password.length == 0) {
+          lblPassword.innerHTML = "Password required".fontcolor("red");
+        } else {
+          if (password.match(regExp)) {
+            lblPassword.innerHTML = "Strong Password".fontcolor("green");
+            meter.value = 100;
+          } else {
+            if (password.length < 4) {
+              lblPassword.innerHTML = "Poor Password".fontcolor("red");
+              meter.value = 30;
+            } else {
+              lblPassword.innerHTML = "Weak Password".fontcolor("goldenrod");
+              meter.value = 70;
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      meter {
+        width: 170px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <dl>
+      <dt>Password</dt>
+      <dd>
+        <input type="password" id="txtPwd" onkeyup="verifyPassword()" />
+        <br />
+        <meter min="1" max="100"></meter>
+      </dd>
+      <dd id="lblPwd"></dd>
+    </dl>
+  </body>
+</html>
