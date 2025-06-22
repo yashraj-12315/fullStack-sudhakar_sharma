@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script>
+      var regExp = / /;
+      var tip = "";
+      function countryChange() {
+        var countryName = document.getElementById("lstCountries").value;
+        var imgFlag = document.getElementById("imgFlag");
+        var txtMobile = document.getElementById("txtMobile");
+
+        if (countryName == "India") {
+          imgFlag.src = "../public/images/card-1.png";
+          regExp = /\+91\d{10}/;
+          tip = "+919142046589";
+          txtMobile.placeholder = tip;
+        } else if (countryName == "US") {
+          imgFlag.src = "../public/images/card-2.png";
+          regExp = /\+\(1\)\(\d{3}\)\s\d{3}-\d{4}/;
+          tip = "+(1)(425) 555-0100";
+          txtMobile.placeholder = tip;
+        } else if (countryName == "UK") {
+          imgFlag.src = "../public/images/iphone.jpg";
+          regExp = /\+\(44\)\(\d{2}\)\s\d{4}\s\d{4}/;
+          tip = "+(44)(20) 1234 5678";
+          txtMobile.placeholder = tip;
+        } else {
+          alert("Please select a Country");
+        }
+      }
+
+      function verifyClick() {
+        var mobile = document.getElementById("txtMobile").value;
+        var lblError = document.getElementById("lblError");
+
+        if (mobile.match(regExp)) {
+          document.write("<h3>Mobile verified successfully...</h3>");
+        } else {
+          lblError.innerHTML = `Invalid Mobile: ${tip}`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <dl class="w-25">
+      <h2>Verify Mobile</h2>
+      <dt>Your Country</dt>
+      <dd class="input-group">
+        <select
+          class="form-select"
+          id="lstCountries"
+          onchange="countryChange()"
+        >
+          <option>Select Country</option>
+          <option>India</option>
+          <option>US</option>
+          <option>UK</option>
+        </select>
+        <span class="input-group-text">
+          <img id="imgFlag" width="40" height="30" />
+        </span>
+      </dd>
+      <dt>Your Mobile</dt>
+      <dd>
+        <input type="text" id="txtMobile" class="form-control" />
+      </dd>
+      <dd id="lblError" class="text-danger"></dd>
+      <button onclick="verifyClick()" class="w-100 btn btn-warning">
+        Verify
+      </button>
+    </dl>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script>
+      function verifyPassword() {
+        var password = document.getElementById("txtPwd").value;
+        var lblPassword = document.getElementById("lblPwd");
+        var regExp = /(?=.*[A-Z])\w{4,15}/;
+        var progress = document.getElementById("progress");
+        if (password.length == 0) {
+          lblPassword.innerHTML = "Password required";
+          progress.style.width = "0%";
+        } else {
+          if (password.match(regExp)) {
+            lblPassword.innerHTML = "Strong Password";
+            progress.style.width = "100%";
+            progress.className =
+              "progress-bar progress-bar-animated progress-bar-striped bg-success";
+          } else {
+            if (password.length < 4) {
+              lblPassword.innerHTML = "Poor Password";
+              progress.style.width = "30%";
+              progress.className =
+                "progress-bar progress-bar-animated progress-bar-striped bg-danger";
+            } else {
+              lblPassword.innerHTML = "Weak Password";
+              progress.style.width = "70%";
+              progress.className =
+                "progress-bar progress-bar-animated progress-bar-striped bg-warning";
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="container-fluid">
+    <h4>Verify Password</h4>
+    <dl class="w-25">
+      <dt>Password</dt>
+      <dd>
+        <input
+          class="form-control"
+          type="password"
+          id="txtPwd"
+          onkeyup="verifyPassword()"
+        />
+        <div class="progress mt-2">
+          <div
+            id="progress"
+            class="progress-bar progress-bar-animated progress-bar-striped"
+          >
+            <span id="lblPwd"></span>
+          </div>
+        </div>
+      </dd>
+    </dl>
+  </body>
+</html>

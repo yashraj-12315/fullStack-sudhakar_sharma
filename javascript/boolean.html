@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function verifyCard() {
+        var card = document.getElementById("txtcard").value;
+
+        if (card === "234567890") {
+          document.getElementById("txtCvv").disabled = false;
+          document.getElementById("txtcard").readOnly = true;
+        }
+      }
+
+      function verifyCvv() {
+        var cvv = document.getElementById("txtCvv").value;
+        if (cvv === "234") {
+          document.getElementById("lstExpiry").disabled = false;
+          document.getElementById("txtCvv").readOnly = true;
+        }
+      }
+      function verifyExpiry() {
+        var expiry = document.getElementById("lstExpiry").value;
+
+        if (expiry === "2025") {
+          document.getElementById("btnPay").disabled = false;
+          document.getElementById("lstExpiry").readOnly = true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Payment Details</legend>
+      <dl>
+        <dt>Card Number</dt>
+        <dd>
+          <input
+            type="text"
+            id="txtcard"
+            maxlength="16"
+            onblur="verifyCard()"
+          />
+        </dd>
+        <dt>CVV</dt>
+        <dd>
+          <input
+            type="text"
+            id="txtCvv"
+            size="4"
+            disabled
+            onblur="verifyCvv()"
+          />
+        </dd>
+        <dt>Expiry</dt>
+        <dd>
+          <select id="lstExpiry" disabled onchange="verifyExpiry()">
+            <option>Select Expiry</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+          </select>
+        </dd>
+      </dl>
+      <button id="btnPay" disabled>Pay</button>
+    </fieldset>
+  </body>
+</html>
