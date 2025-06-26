@@ -1,0 +1,26 @@
+<script>
+  // function findRange(val,min,max){
+  //     if(val>=min && val<=max){
+  //         document.write(`Your value ${val} is in range ${min} to ${max}`)
+  //     }else{
+  //         document.write(`Your value ${val} is out of range ${min} to ${max}`)
+  //     }
+  // }
+  // findRange(20,1,10)
+
+  function findGreatest(a, b, c) {
+    if (a > b && a > c) {
+      document.write(`a= ${a} is greater than b=${b} and c=${c} `);
+    } else if (b > c) {
+      document.write(`b=${b} is greater than a=${a} and c=${c}`);
+    } else {
+      document.write(`c=${c} is greater than a=${a} and b=${b}`);
+    }
+  }
+
+  findGreatest(
+    parseInt(prompt("Enter a")),
+    parseInt(prompt("Enter b")),
+    parseInt(prompt("Enter c"))
+  );
+</script>
