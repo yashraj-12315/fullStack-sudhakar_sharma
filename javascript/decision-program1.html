@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   function loadClick() {
+      //     var img = document.createElement("img");
+      //     img.src = "../public/images/women-fashion.jpg";
+      //     img.width = "100";
+      //     img.height = "100";
+      //     document.getElementById("container").appendChild(img);
+      //   }
+
+      function bodyLoad() {
+        var ol = document.createElement("ol");
+        var li1 = document.createElement("li");
+        var li2 = document.createElement("li");
+        li1.innerHTML = "HTML";
+        li2.innerHTML = "CSS";
+        ol.appendChild(li1);
+        ol.appendChild(li2);
+        document.querySelector("body").appendChild(ol);
+      }
+    </script>
+  </head>
+  <body onload="bodyLoad()">
+    <!-- <button onclick="loadClick()">Load Image</button>
+    <br />
+    <div id="container"></div> -->
+  </body>
+</html>

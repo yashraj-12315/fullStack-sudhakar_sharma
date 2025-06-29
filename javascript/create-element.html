@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var items = ["Home", "Shop", "Blog", "Pages"];
+      function bodyLoad() {
+        items.map(function (item, index) {
+          var li = document.createElement("li");
+          li.innerHTML = item;
+          document.querySelector("ol").appendChild(li);
+
+          var option = document.createElement("option");
+          option.text = item; //text is displayed
+          option.value = index; //value is submitted
+          option.innerHTML = item;
+          document.querySelector("select").appendChild(option);
+
+          var span = document.createElement("span");
+          span.innerHTML = `<a href=${item}.html>${item}</a>`;
+          document.querySelector("nav").appendChild(span);
+
+          var ul_li = document.createElement("li");
+          var input = document.createElement("input");
+          input.type = "checkbox";
+          input.value = item;
+          var label = document.createElement("label");
+          label.innerHTML = item;
+          ul_li.appendChild(input);
+          ul_li.appendChild(label);
+          document.querySelector("ul").appendChild(ul_li);
+        });
+      }
+    </script>
+    <style>
+      nav span {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body onload="bodyLoad()">
+    <ol></ol>
+    <select></select>
+    <nav></nav>
+    <ul></ul>
+  </body>
+</html>
