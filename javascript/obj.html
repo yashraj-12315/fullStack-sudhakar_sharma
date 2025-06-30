@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script>
+      var iphone = {
+        title: "Apple iphone 16 (White 128 GB)",
+        price: 69999,
+        rating: { rate: 4.6, ratings: 10450, reviews: 240 },
+        image: "../public/images/iphone.jpg",
+        offers: [
+          "Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarter T&C",
+          "Bank OfferFlat ₹10 Instant Cashback on Paytm UPI Trxns. Min Order Value ₹500. Valid once per Paytm account T&C",
+          "Bank Offer₹2500 Off On Flipkart Axis Bank Credit Card Non EMI Transactions.T&C",
+        ],
+      };
+
+      function bodyLoad() {
+        document.getElementById("imgProduct").src = iphone.image;
+        document.getElementById("lblTitle").textContent = iphone.title;
+        document.getElementById(
+          "lblRatings"
+        ).innerHTML = `<span class="badge bg-success rounded rounded-1"> ${
+          iphone.rating.rate
+        } <span class="bi bi-star-fill"></span></span> <span class="fw-bold text-secondary">${iphone.rating.ratings.toLocaleString()} ratings & ${
+          iphone.rating.reviews
+        } reviews</span>`;
+        document.getElementById("lblPrice").innerHTML =
+          "&#8377;" + iphone.price.toLocaleString("en");
+
+        iphone.offers.map(function (offer) {
+          var li = document.createElement("li");
+          li.className = "bi bi-tag-fill my-2 text-success";
+          li.innerHTML = `<span class="text-secondary">${offer}</span> `;
+          document.querySelector("ul").appendChild(li);
+        });
+      }
+    </script>
+  </head>
+  <body class="container-fluid" onload="bodyLoad()">
+    <div class="row mt-4">
+      <div class="col-3">
+        <img id="imgProduct" width="100%" />
+      </div>
+      <div class="col-9">
+        <div class="fs-4 fw-bold" id="lblTitle"></div>
+        <div class="mt-2" id="lblRatings"></div>
+        <div class="mt-4 fw-bold fs-2" id="lblPrice"></div>
+        <div>
+          <h5>Available Offers</h5>
+          <ul class="list-unstyled"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
