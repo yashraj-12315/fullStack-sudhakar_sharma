@@ -51,9 +51,37 @@
         <label id="lblCount" class="form-label fw-bold"></label>
       </div>
       <div class="mt-3">
-        <button class="btn btn-warning bi bi-pen-fill">Edit</button>
-        <button onclick="deleteClick()" class="btn btn-danger bi bi-trash-fill">Delete</button>
-        <button class="btn btn-outline-danger bi bi-trash-fill">
+        <button
+        onclick="editClick()"
+          data-bs-target="#edit"
+          data-bs-toggle="modal"
+          class="btn btn-warning bi bi-pen-fill"
+        >
+          Edit
+        </button>
+        <div class="modal fade" id="edit">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Edit Appointment</h4>
+                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="txtEdit" class="form-control">
+              </div>
+              <div class="modal-footer">
+                <button onclick="saveClick()" data-bs-dismiss="modal" class="btn btn-success">Save Appointment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button onclick="deleteClick()" class="btn btn-danger bi bi-trash-fill">
+          Delete
+        </button>
+        <button
+          onclick="clearAll()"
+          class="btn btn-outline-danger bi bi-trash-fill"
+        >
           Clear All
         </button>
       </div>
