@@ -1,0 +1,22 @@
+<script>
+  var id = Symbol();
+  var product = {
+    [id]: 1,
+    Name: "Samsung TV",
+    Price: 45000,
+    Stock: true,
+  };
+
+  // for(var key in product){
+  //     document.write(`${key}: ${product[key]} <br/>`)
+  // }
+
+  //Object.keys() returns an Array
+  //   delete product.Stock;
+  //   Object.keys(product).map(function (key) {
+  //     document.write(`${key}: ${product[key]}<br>`);
+  //   });
+
+  //   document.write(product[id]);
+  document.write(Object.keys(product).length);
+</script>
