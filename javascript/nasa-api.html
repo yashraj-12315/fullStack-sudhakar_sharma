@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules//bootstrap/dist/js/bootstrap.bundle.js">
+
+    <script>
+        function bodyLoad(){
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=UEs7dngxFXwVTyLwa5zNcxsfKFtCbm4rOes7beXF")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(MarsObj){
+                MarsObj.photos.map(function(photo){
+                    var tr = document.createElement("tr");
+
+                    var tdId = document.createElement("td");
+                    var tdImage = document.createElement("td");
+                    var tdCamera = document.createElement("td");
+                    var tdRover = document.createElement("td");
+
+                    tdId.innerHTML= photo.id;
+                    tdImage.innerHTML=`<a href=${photo.img_src} target="_blank"> <img src=${photo.img_src} width="100" height="100" ></a>`
+                    tdCamera.innerHTML=photo.camera.full_name;
+                    tdRover.innerHTML=photo.rover.name;
+
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdImage);
+                    tr.appendChild(tdCamera);
+                    tr.appendChild(tdRover);
+
+                    document.querySelector("tbody").appendChild(tr)
+
+                })
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <h2>Mars Rover Photos</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="bi bi-card-list"> Photo Id</th>
+                <th class="bi bi-eye-fill"> Preview</th>
+                <th class="bi bi-camera"> Camera</th>
+                <th class="bi bi-rocket"> Rover</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</body>
+</html>
