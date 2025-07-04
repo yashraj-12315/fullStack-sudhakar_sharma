@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasa</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules//bootstrap/dist/js/bootstrap.bundle.js"
+    />
+
+    <script>
+      function bodyLoad() {
+        fetch(
+          "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=UEs7dngxFXwVTyLwa5zNcxsfKFtCbm4rOes7beXF"
+        )
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (MarsObj) {
+            MarsObj.photos.map(function (photo) {
+              var div = document.createElement("div");
+              div.className = "card m-2 p-2";
+              div.style.width = "200px";
+
+              div.innerHTML = `
+                    <img src=${photo.img_src} height="100" class="card-img-top">
+                    <div class="card-header">
+                        <h4>${photo.id}</h4>
+                    </div>
+                    <div class="card-body">
+                        <dl>
+                            <dt>Camera </dt>
+                            <dd>${photo.camera.full_name}</dd>
+                            <dt>Rover</dt>
+                            <dd>${photo.rover.name}</dd>
+                        </dl>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-dark w-100 bi bi-eye-fill" href=${photo.img_src} target="_blank"> View</a>
+                    </div>
+                    `;
+
+              document.querySelector("main").appendChild(div);
+            });
+          });
+      }
+    </script>
+  </head>
+  <body class="container-fluid" onload="bodyLoad()">
+    <h2>Mars Rover Photos</h2>
+    <main class="d-flex flex-wrap"></main>
+  </body>
+</html>
