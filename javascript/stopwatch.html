@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        border: 1px solid gray;
+        height: 50px;
+        width: 400px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+      }
+      .container div {
+        border: 1px solid gray;
+        padding: 2px;
+        text-align: center;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial;
+        color: gray;
+      }
+    </style>
+    <script>
+      var ms = 0;
+      var seconds = 0;
+      var min =0;
+      function startWatch() {
+        ms++;
+        document.getElementById(
+          "ms"
+        ).innerHTML = `<span>${ms}<font size="2"> ms</font></span>`;
+        if (ms === 999) {
+          seconds++;
+          ms = 0;
+          document.getElementById(
+            "seconds"
+          ).innerHTML = `<span>${seconds}<font size="2"> s</font></span>`;
+        }
+        if (seconds === 59) {
+          min++;
+          seconds = 0;
+          document.getElementById(
+            "min"
+          ).innerHTML = `<span>${min}<font size="2"> min</font></span>`;
+        }
+      }
+      var thread;
+      function startClick() {
+        thread = setInterval(startWatch, 1);
+      }
+
+      function clearClick() {
+        clearInterval(thread);
+        document.getElementById("ms").innerHTML = "0 <font size='2'>ms</font>";
+        document.getElementById("seconds").innerHTML =
+          "0 <font size='2'>s</font>";
+        document.getElementById("min").innerHTML =
+          "0 <font size='2'>min</font>";
+        ms = 0;
+        s = 0;
+        min = 0;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <div>0 hr</div>
+        <div id="min">0 min</div>
+        <div id="seconds">0 s</div>
+        <div id="ms">0 ms</div>
+      </div>
+      <div style="margin-top: 10px">
+        <button onclick="startClick()">Start</button>
+        <button onclick="clearClick()">Clear</button>
+      </div>
+    </div>
+  </body>
+</html>

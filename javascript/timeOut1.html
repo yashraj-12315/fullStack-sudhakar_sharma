@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>Document</title>
+    <script>
+      function clock() {
+        var now = new Date();
+        var time = now.toLocaleTimeString();
+        document.querySelector("p").innerHTML = time;
+      }
+      var thread;
+
+      function bodyLoad() {
+       thread= setInterval(clock, 1000);
+      }
+
+      function pauseClick(){
+        clearInterval(thread)
+      }
+
+      function playClick(){
+        thread = setInterval(clock,1000)
+      }
+    </script>
+  </head>
+  <body onload="bodyLoad()">
+    <div align="center " class="mt-2">
+        <button onclick="pauseClick()" class="bi bi-pause"></button>
+        <button onclick="playClick()" class="bi bi-play"></button>
+      <p></p>
+    </div>
+  </body>
+</html>
