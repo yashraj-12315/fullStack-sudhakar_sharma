@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function getCourses() {
+      var courses = "";
+      var checkboxes = document.getElementsByName("Course");
+      for (var checkbox of checkboxes) {
+        if (checkbox.checked) {
+          courses += checkbox.value + "<br>";
+        }
+      }
+      document.querySelector("p").innerHTML = courses;
+    }
+
+    function submitClick() {
+      getCourses();
+    }
+
+    function courseChange() {
+      getCourses();
+    }
+  </script>
+  <body>
+    <ul style="list-style: none">
+      <li>
+        <input
+          onchange="courseChange()"
+          type="checkbox"
+          name="Course"
+          value="Java"
+        /><label>Java</label>
+      </li>
+      <li>
+        <input
+          onchange="courseChange()"
+          type="checkbox"
+          name="Course"
+          value="UI"
+        /><label>UI</label>
+      </li>
+      <li>
+        <input
+          onchange="courseChange()"
+          type="checkbox"
+          name="Course"
+          value="React"
+        /><label>React</label>
+      </li>
+      <li>
+        <input
+          onchange="courseChange()"
+          type="checkbox"
+          name="Course"
+          value=".NET"
+        /><label>.NET</label>
+      </li>
+    </ul>
+    <button onclick="submitClick()">Submit</button>
+    <h3>Selected Courses</h3>
+    <p></p>
+  </body>
+</html>
