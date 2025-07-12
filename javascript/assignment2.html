@@ -1,0 +1,70 @@
+<script>
+  function printTable(n) {
+    for (var i = 1; i <= 10; i++) {
+      document.write(`${n} X ${i} = ${n * i} <br>`);
+    }
+  }
+
+  //   printTable(parseInt(prompt("Enter number")));
+
+  var fact = 1;
+  function factorial(n) {
+    for (i = 1; i <= n; i++) {
+      fact *= i;
+    }
+    document.write(`Factorial of ${n} is ${fact}`);
+  }
+
+  //   factorial(parseInt(prompt("Enter number")));
+
+  //find the number of repeating JavaScript word in a sentence
+
+  var str =
+    "Welcome to JavaScript . It is language. JavaScript is used for DOM";
+  var words = str.split(" ");
+  var count = 0;
+  for (var i = 0; i < words.length; i++) {
+    if (words[i] === "JavaScript") {
+      count++;
+    }
+  }
+  // document.write(`JavaScript occured ${count} times`)
+
+  // Write a program to print the text in reverse "emoclew"
+  //   var str = "Welcome";
+  //   for (var i = str.length - 1; i >= 0; i--) {
+  //     document.write(str[i])
+  //   }
+
+  // check whether a string is palindrome or not
+
+  //   var str = "radar";
+  //   var rev = "";
+
+  //   for (var i = str.length - 1; i >= 0; i--) {
+  //     rev += str[i];
+  //   }
+
+  //   if (str === rev) {
+  //     document.write(`The word ${str} is palindrome`);
+  //   } else {
+  //     document.write(`The word ${str} is not a palindrome`);
+  //   }
+
+  // Write a program to find the total number of vowels in a string
+
+  var str = "Welcome to JavaScript";
+  var count = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (
+      str[i] === "a" ||
+      str[i] === "e" ||
+      str[i] === "i" ||
+      str[i] === "o" ||
+      str[i] === "u"
+    ) {
+      count++;
+    }
+  }
+  document.write(`Total count of the vowels is : ${count}`);
+</script>
