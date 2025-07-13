@@ -1,0 +1,9 @@
+<script>
+    function details(...product){
+        var [id,name,price] = product;
+        document.write(`Id=${id} <br> Name=${name} <br> Price=${price}`)
+    }
+
+    var productDetails = [1,"TV",50000];
+    details(...productDetails)
+</script>
