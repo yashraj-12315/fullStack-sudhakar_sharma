@@ -1,0 +1,28 @@
+<script>
+  function printYash() {
+    console.log("Yash");
+    printYash();
+  }
+  // printYash()
+
+  //Print factorial using recursion
+  function factorial(n) {
+    if (n === 1) {
+      return 1;
+    } else {
+      return n * factorial(n - 1);
+    }
+  }
+  //  document.write(`Factorial of  5 is ${factorial(5)}`)
+
+  //Write a program to print multiplication table using recursion
+
+  function tableRecursion(n, m = 1) {
+    if (m > 10) {
+      return;
+    }
+    document.write(`${n} X ${m} = ${n * m}<br>`);
+    tableRecursion(n, m + 1);
+  }
+  tableRecursion(parseInt(prompt("Enter number")));
+</script>
