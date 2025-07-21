@@ -1,0 +1,14 @@
+<script>
+    function* Iterator(){
+        yield "A",
+        yield ["Delhi","Hyd"],
+        yield {Name:"TV"}
+    }
+
+    var data =  Iterator();
+
+    console.log(data.next())
+    console.log(data.next())
+    console.log(data.next())
+    console.log(data.next())
+</script>

@@ -1,0 +1,12 @@
+<script>
+//    var addition = (a,b)=>a+b;
+//    document.write(`Adddition=${addition(20,30)}`)
+
+fetch("https://fakestoreapi.com/products/categories")
+.then(response=>response.json())
+.then(categories=>{
+    categories.map(category=>{
+        document.write(`<li> ${category}</li>`)
+    })
+})
+</script>
