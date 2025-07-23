@@ -1,0 +1,22 @@
+<script>
+  class Product {
+    Name = "Samsung";
+    Price = 50000.32;
+    Qty = 2;
+    Total() {
+      return this.Qty * this.Price;
+    }
+    Print() {
+      document.write(
+        `Name=${this.Name}<br> Price=${this.Price}<br> Qty=${
+          this.Qty
+        }<br> Total=${this.Total()}`
+      );
+    }
+  }
+
+  let obj = new Product();
+  obj.Qty = prompt("Enter quantity");
+  obj.Print();
+  document.write(obj.Total());
+</script>
