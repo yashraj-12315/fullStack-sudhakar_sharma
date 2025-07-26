@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class HDFC_BANK_V1 {
+        Personal = "Personal banking Services";
+        Print() {
+          document.write(`${this.Personal}<br>`);
+        }
+      }
+      class HDFC_BANK_V2 extends HDFC_BANK_V1 {
+        NRI = "NRI banking Services";
+
+        Print() {
+          super.Print();
+          document.write(`${this.NRI} <br>`);
+        }
+      }
+
+      class HDFC_BANK_V3 extends HDFC_BANK_V2 {
+        Loans = "Housing and Car loans";
+        Print() {
+          super.Print();
+          document.write(`${this.Loans}<br>`);
+        }
+      }
+
+      function InstallClick() {
+        var version = document.querySelector("select").value;
+
+        switch (version) {
+          case "ver1":
+            document.write(`<h2>HDFC Version-1 Installed</h2>`);
+            let obj1 = new HDFC_BANK_V1();
+            obj1.Print();
+            break;
+          case "ver2":
+            document.write(`<h2>HDFC Version-2 Installed</h2>`);
+            let obj2 = new HDFC_BANK_V2();
+            obj2.Print();
+            break;
+          case "ver3":
+            document.write(`<h2>HDFC Version-3 Installed</h2>`);
+            let obj3 = new HDFC_BANK_V3();
+            obj3.Print();
+            break;
+          default:
+            document.write("Please select a version");
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Install HDFC App</h3>
+    <select>
+      <option>Select Version</option>
+      <option value="ver1">HDFC Version 1</option>
+      <option value="ver2">HDFC Version 2</option>
+      <option value="ver3">HDFC Version 3</option>
+    </select>
+    <button onclick="InstallClick()">Install App</button>
+  </body>
+</html>
