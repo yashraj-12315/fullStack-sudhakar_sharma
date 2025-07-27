@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,6 +21,39 @@
 
       function signoutClick() {
         sessionStorage.removeItem("Username");
+        location.href = "./login.html";
+      }
+    </script>
+  </head>
+  <body onload="bodyload()">
+    <h2>
+      <span id="lblName"></span> - Dashboard -
+      <button onclick="signoutClick()">Signout</button>
+    </h2>
+  </body>
+</html> -->
+
+
+<!-- Local Storage -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function bodyload() {
+        if (localStorage.getItem("Username") === null) {
+          location.href = "./login.html";
+        } else {
+          document.getElementById("lblName").innerHTML =
+            localStorage.getItem("Username");
+        }
+      }
+
+      function signoutClick() {
+        localStorage.removeItem("Username");
         location.href = "./login.html";
       }
     </script>

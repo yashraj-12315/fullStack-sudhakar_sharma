@@ -6,7 +6,8 @@
     <title>Document</title>
     <script>
         function loginClick(){
-            sessionStorage.setItem("Username",document.getElementById("txtName").value);
+            // sessionStorage.setItem("Username",document.getElementById("txtName").value);
+            localStorage.setItem("Username",document.getElementById("txtName").value)
             location.href = "./dashboard.html"
         }
     </script>
