@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        function loginClick(){
-            // sessionStorage.setItem("Username",document.getElementById("txtName").value);
-            localStorage.setItem("Username",document.getElementById("txtName").value)
-            location.href = "./dashboard.html"
-        }
+      function loginClick() {
+        // sessionStorage.setItem("Username",document.getElementById("txtName").value);
+        // localStorage.setItem("Username",document.getElementById("txtName").value);
+        document.cookie = `Username = ${
+          document.getElementById("txtName").value
+        }; expires=Sun, 29 Jul 2025 06:46:07 GMT`;
+        location.href = "./dashboard.html";
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h2>User Login</h2>
     <dl>
-        <dt>User Login</dt>
-        <dd><input type="text" id="txtName"></dd>
+      <dt>User Login</dt>
+      <dd><input type="text" id="txtName" /></dd>
     </dl>
     <button onclick="loginClick()">Login</button>
-</body>
+  </body>
 </html>
