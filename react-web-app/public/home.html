@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <script
+    <!-- <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
     ></script>
@@ -12,14 +12,22 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <!-- <script type="text/babel">
       //upto React 17x
       // ReactDOM.render("Welcome to React",document.getElementById("root"));
-      
+
       //React 18x
+    //   const root = ReactDOM.createRoot(document.getElementById("root"));
+    //   root.render("Hello!  React");
+    </script> -->
+
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <script type="text/babel">
       const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render("Hello!  React");
+      root.render("Hello! World");
     </script>
   </head>
   <body>
