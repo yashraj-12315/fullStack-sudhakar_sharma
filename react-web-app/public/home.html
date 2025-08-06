@@ -26,8 +26,26 @@
     <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="../node_modules/@babel/standalone/babel.js"></script>
     <script type="text/babel">
+      function Login() {
+        return (
+          <div>
+            <h3>User Login</h3>
+            <dl>
+              <dt>User Name</dt>
+              <dd>
+                <input type="text" />
+              </dd>
+              <dt>Password</dt>
+              <dd>
+                <input type="password" />
+              </dd>
+            </dl>
+            <button>Login</button>
+          </div>
+        );
+      }
       const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render("Hello! World");
+      root.render(<Login />);
     </script>
   </head>
   <body>
