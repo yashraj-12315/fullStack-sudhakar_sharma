@@ -1,0 +1,53 @@
+.bg-style {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgb(224, 96, 96) 70%, white);
+}
+.brand-title {
+  color: red;
+  font-size: 40px;
+  font-family: Arial;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px white;
+}
+
+main {
+  background-image: url("../../public/netflix-banner.jpg");
+  background-size: cover;
+  height: 400px;
+  margin: 5px 30px 30px 30px;
+  border-radius: 30px;
+}
+
+.main-shade {
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  font-family: Arial;
+}
+
+.main-title {
+  font-size: 50px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+.main-subtitle {
+  font-size: 20px;
+}
+.email,.btn-start{
+font-size: 20px;
+padding: 5px;
+border-radius: 25px;
+margin-right: 10px;
+border: none;
+}
+.email::placeholder{
+font-size: 14px;
+}
+
+.btn-start{
+    background-color: red;
+    color: white;
+}
